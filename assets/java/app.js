@@ -59,7 +59,7 @@ for (var i = 0; i < results.length; i++) {
     animateImage = results[i].images.fixed_height.url;
 
     // Hold all image URLs
-    holdAllImages = $("<img>").addClass("gif").attr("src", stillImage).attr("data-state", "still").attr("data-still", stillImage).attr("data-animated", animatedImage);
+    holdAllImages = $("<img>").addClass("gif").attr("src", stillImage).attr("data-state", "still").attr("data-still", stillImage).attr("data-animated", animateImage);
 
     // Displaying the still image URL
     imageDiv.append(holdAllImages);
@@ -97,12 +97,13 @@ for (var i = 0; i < results.length; i++) {
           // Adding the button to the buttons-view div
           $("#gifContainer").append(addNew);
 
-        //   console.log(initialArray);
+          console.log(initialArray);
         }
     }
 
         // This function handles events where a show button is clicked
         $("#searchButton").on("click", function(event) {
+            
         event.preventDefault();
 
         // Grab input from text box

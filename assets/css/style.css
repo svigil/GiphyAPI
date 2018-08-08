@@ -1,3 +1,18 @@
+body {
+    background-image: url("../images/back3.jpg");
+    background-size: 100%;
+    z-index: 1;
+    }
+
+.navbar {
+    color: aliceblue;
+    }
+
+.container {
+    color: aliceblue;
+    }
+
+
 @keyframes gradient {
     0% {
       background-position: 50%, 50%;
