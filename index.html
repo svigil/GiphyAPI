@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta charset="UTF-8">
-    <title>Title Goes Here</title>
+    <title>Giphy API</title>
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- jQuery -->
@@ -17,10 +17,36 @@
     <!-- Viewport to make available on different platforms -->
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script> -->
     </head>
 
 <body>
+    
+    <nav class="navbar">
+        <h2 id="title">Giphy Fun</h2>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" id="searchBar" type="search" placeholder="Search for your GIF!" aria-label="Search">
+                    <button class="btn  my-sm-0" id="searchButton" type="submit">Add Your Gif!</button>
+            </form>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" id="infoBar">
+                <strong>Type in your Favorite Gif and then hover over the right to click the button to add!</strong><br>
+                Then click the buttons to see them appear! 
+                
+            </div>
+        </div>
+    <div class="container" id="gifContainer">
+        <div class="row">
+            <div class="col-md-12 text-center" id="gifArea" style="color:black; justify-content: center">
+            </div>
+        </div>
+    </div>
+
+    
 
     <!-- Script -->
 <script src="assets/java/app.js"></script>
