@@ -30,7 +30,7 @@ function displayGIF(){
     var newGif = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + newGif + "&api_key=" + apiKey + "&fmt=json&limit=10";
 
-    console.log(queryURL); //delete me
+    // console.log(queryURL); //delete me
 //  Create ajax to display gifs depending on button
 
 $.ajax({
@@ -38,11 +38,13 @@ $.ajax({
     method: "GET"
 }).then(function(response) {
 
-    console.log(response);
+    // console.log(response);
 
-
+    // console.log(queryURL);
 
 var results = response.data;
+
+console.log(results);
 
 for (var i = 0; i < results.length; i++) {
 
@@ -68,12 +70,16 @@ for (var i = 0; i < results.length; i++) {
     $(showDiv).prepend(imageDiv);
 
     // Prepending the new gifs selected above others
-    $("#gifArea").prepend(showDiv);
+    $("#gifImages").prepend(showDiv);
 
 }
 
 
     $(showDiv).prepend(imageDiv);
+
+console.log(showDiv);
+console.log(results);
+
     });
 }
 
@@ -97,7 +103,7 @@ for (var i = 0; i < results.length; i++) {
           // Adding the button to the buttons-view div
           $("#gifContainer").append(addNew);
 
-          console.log(initialArray);
+        //   console.log(initialArray);
         }
     }
 
